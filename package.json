@@ -22,7 +22,7 @@
     "url": "git+https://github.com/textbook/starter-kit.git"
   },
   "author": "Jonathan Sharpe <mail@jonrshar.pe>",
-  "contributors": [],
+  "contributors": ["Ali Haider"],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/textbook/starter-kit/issues"
