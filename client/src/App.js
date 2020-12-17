@@ -16,10 +16,7 @@ export function App() {
 		<main role="main">
 
 			<div>
-				<h1>Test Hussein</h1>
-				<h1>Test Nouri</h1>
-				<img className="logo" data-qa="logo" src={logo} alt="Just the React logo" />
-				<h1 className="message" data-qa="message">{message}</h1>
+				<UpcomingLessons/>
 			</div>
 		</main>
 	);
