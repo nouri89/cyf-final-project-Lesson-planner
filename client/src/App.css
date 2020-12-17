@@ -1,11 +1,16 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+}
+  
 .logo {
-    width: 100px;
+    width: 200px;
 }
 
-.message {
-    color: blue;
-}
-
-.message:hover {
-    background-color: yellow;
+.footer {
+    background: red;
+    height: .5rem;
+    width: 100%;
+    position: relative;
+    bottom: 0;
 }
