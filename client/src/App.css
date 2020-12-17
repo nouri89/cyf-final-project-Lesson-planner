@@ -6,11 +6,3 @@
 .logo {
     width: 200px;
 }
-
-.footer {
-    background: red;
-    height: .5rem;
-    width: 100%;
-    position: relative;
-    bottom: 0;
-}
