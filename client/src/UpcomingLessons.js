@@ -1,8 +1,10 @@
 import React from "react";
 import fakeLessons from "./fakeLessons.json"
+import LessonsTable from "./LessonsTable"
 
  const lessons = fakeLessons.lessons;
 const UpcomingLessons =()=>{
+ 
 
     return(
 
@@ -17,18 +19,13 @@ const UpcomingLessons =()=>{
     </tr>
   </thead>
   <tbody>
-    {lessons.map(e =>
-    <tr>
-      <th scope="row">{e.module}</th>
-      <td>{e.Lesson}</td>
-      <td>{e.Date}</td>
-      <td>{e.Time}</td>
-      <td><button type="button" class="btn btn-primary">View Roles</button></td>
-      
-    </tr>
-   
-    )
-}
+    {lessons.map(el =>
+  
+<LessonsTable el={el}/>
+  
+  
+     
+  )}
   </tbody>
   </table>
 </div>     

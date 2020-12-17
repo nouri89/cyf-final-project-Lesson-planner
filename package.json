@@ -22,14 +22,16 @@
     "url": "git+https://github.com/textbook/starter-kit.git"
   },
   "author": "Jonathan Sharpe <mail@jonrshar.pe>",
-  "contributors": ["Ali Haider"],
+  "contributors": [
+    "Ali Haider"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/textbook/starter-kit/issues"
   },
   "homepage": "https://github.com/textbook/starter-kit#readme",
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
+    "@babel/cli": "^7.12.10",
     "@babel/core": "^7.10.5",
     "@babel/node": "^7.10.5",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
@@ -66,8 +68,10 @@
     "@babel/runtime": "^7.10.5",
     "express": "^4.17.1",
     "helmet": "^3.23.3",
+    "moment": "^2.29.1",
     "morgan": "^1.10.0",
-    "pg": "^8.4.1"
+    "pg": "^8.4.1",
+    "react-moment": "^1.0.0"
   },
   "engines": {
     "node": "^10 || ^12 || ^14"
