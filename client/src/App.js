@@ -8,9 +8,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { getMessage } from "./service";
 import logo from "./logo.svg";
 import UpcomingLessons from "./UpcomingLessons";
+import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 import LessonPage from "./LessonPage/LessonPage";
-
 export function App() {
+
+	const [viewRolesButtonClicked, setViewRolesButtonClicked] = useState(false);
+	const [lessonId, setLessonId] = useState();
+  const RolesButtonHandler = (id) =>{
+		setViewRolesButtonClicked(true);
+    	setLessonId(id);
+    } 
+
+
+
 	const [message, setMessage] = useState("Loading...");
 
 	useEffect(() => {
@@ -20,13 +31,13 @@ export function App() {
 	return (
 		<main role="main">
 			<div>
-				<h1>Test Hussein</h1>
-				<h1>Test Nouri</h1>
-				<img className="logo" data-qa="logo" src={logo} alt="Just the React logo" />
-				<h1 className="message" data-qa="message">{message}</h1>
+				 {!viewRolesButtonClicked? (<UpcomingLessons RolesButtonHandler={RolesButtonHandler}/>) : null}
+				  {viewRolesButtonClicked? (<LessonPage lessonId={lessonId}/>) : null}
+                 
 			</div>
+			
 
-			<LessonPage />
+			
 		</main>
 	);
 }

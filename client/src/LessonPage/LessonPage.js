@@ -8,10 +8,12 @@ import LessonPage_Info from "./LessonPage_Info";
 import LessonPage_Volunteers from "./LessonPage_Volunteers";
 import Footer from "../Footer/Footer";
 
-const LessonPage = () => {
+
+const LessonPage = ({lessonId}) => {
     return (
         <div className="App">
             <Header />
+            <h1>Lesson id: {lessonId}</h1>
             <LessonPage_Info />
             <LessonPage_Volunteers />
             <Footer />
