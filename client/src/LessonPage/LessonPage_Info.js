@@ -7,6 +7,7 @@ const LessonPage_Info = () => {
       <ul className="list-unstyled">
         <li>Module: <span>HTML - CSS</span></li>
         <li>Lesson: <span>Week 1</span></li>
+        <li>Date: <span>01/01/2021</span></li>
         <li>Time: <span>11:00 - 17:00</span></li>
         <li>Lead Teacher: <span>Emile Pafford-Wray</span></li>
         <li>Material: <span><a href="https://syllabus.codeyourfuture.io/html-css/week-1/lesson" target="_blank">https://syllabus.codeyourfuture.io/html-css/week-1/lesson</a></span></li>

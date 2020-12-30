@@ -10,7 +10,7 @@ const LessonsTable = ({el,RolesButtonHandler}) =>{
    return(
    
 <tr>
-      <th scope="row">{el.module}</th>
+      <td>{el.module}</td>
       <td>{el.Lesson}</td>
       <td>{el.Date}</td>
       <td>{el.Time}</td>
