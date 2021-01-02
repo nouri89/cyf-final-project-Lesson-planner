@@ -7,10 +7,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { getMessage } from "./service";
 import logo from "./logo.svg";
-import UpcomingLessons from "./UpcomingLessons";
-import Header from "./Header/Header";
-import Footer from "./Footer/Footer";
+import UpcomingLessons from "./UpcomingLessons/UpcomingLessons";
 import LessonPage from "./LessonPage/LessonPage";
+import LandingPage from "./LandingPage/LandingPage";
+import LogInPage from "./LogInPage/LogInPage";
+import RegisterPage from "./RegisterPage/RegisterPage";
+import AdminPage from "./AdminPage/AdminPage";
+import VolunteersTable from "./AdminPage/VolunteersTable";
+import AvailableRoles from "./LessonPage/AvailableRoles";
+import CreateClassPage from "./AdminPage/CreateClassPage";
+import CreateRoles from "./AdminPage/CreateRoles";
+import Main from "./Main/Main";
 export function App() {
 
 	const [viewRolesButtonClicked, setViewRolesButtonClicked] = useState(false);
@@ -30,13 +37,27 @@ export function App() {
 
 	return (
 		<main role="main">
-			<div>
-				 {!viewRolesButtonClicked? (<UpcomingLessons RolesButtonHandler={RolesButtonHandler}/>) : null}
+	<div>
+			{/*	 {!viewRolesButtonClicked? (<UpcomingLessons RolesButtonHandler={RolesButtonHandler}/>) : null}
 				  {viewRolesButtonClicked? (<LessonPage lessonId={lessonId}/>) : null}
-                 
-			</div>
-			
+	*/}
 
+	{/*	 {!viewRolesButtonClicked? (<AdminPage RolesButtonHandler={RolesButtonHandler}/>) : null}
+				  {viewRolesButtonClicked? (<CreateClassPage lessonId={lessonId}/>) : null}
+*/}
+       <Main/>
+	 
+	  
+			</div>
+
+   
+
+	
+
+    
+	
+
+	
 			
 		</main>
 	);
