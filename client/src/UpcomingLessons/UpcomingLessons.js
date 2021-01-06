@@ -6,7 +6,7 @@ import Footer from "../Footer/Footer";
 import { Link } from "react-router-dom";
 
  const lessons = fakeLessons.lessons;
-const UpcomingLessons =({RolesButtonHandler})=>{
+const UpcomingLessons =({IdHandler})=>{
  
 
     return(
@@ -38,7 +38,7 @@ const UpcomingLessons =({RolesButtonHandler})=>{
   <tbody className="firstRow">
     {lessons.map(el =>
   
-<LessonsTable el={el} RolesButtonHandler={RolesButtonHandler}/>
+<LessonsTable el={el} IdHandler={IdHandler}/>
   
   
      
