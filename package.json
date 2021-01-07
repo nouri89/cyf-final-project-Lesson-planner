@@ -16,7 +16,7 @@
     "preserve": "npm run build",
     "serve": "npm start",
     "start": "node dist/server.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install && cd server && npm install && npm run build"
   },
   "repository": {
     "type": "git",
