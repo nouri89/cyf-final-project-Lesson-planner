@@ -15,7 +15,7 @@ router.get("/", (_, res, next) => {
 		}
 		res.json({ message: "Welcome to Class Planner API" });
 	});
-	pool.end();
+
 });
 router.get("/users", (_, res, next) => {
 	
@@ -26,7 +26,6 @@ router.get("/users", (_, res, next) => {
 		pool.query('SELECT * FROM users', (error, result) => {
         res.json(result.rows);});
 	});
-	pool.end();
 });
 
 router.get("/school", (_, res, next) => {
@@ -38,7 +37,6 @@ router.get("/school", (_, res, next) => {
 		pool.query('SELECT * FROM school', (error, result) => {
         res.json(result.rows);});
 	});
-	pool.end();
 });
 
 router.get("/cohort", (_, res, next) => {
@@ -50,7 +48,6 @@ router.get("/cohort", (_, res, next) => {
 		pool.query('SELECT * FROM cohort', (error, result) => {
         res.json(result.rows);});
 	});
-	pool.end();
 });
 
 router.get("/module", (_, res, next) => {
@@ -62,7 +59,6 @@ router.get("/module", (_, res, next) => {
 		pool.query('SELECT * FROM module', (error, result) => {
         res.json(result.rows);});
 	});
-	pool.end();
 });
 
 router.get("/lesson", (_, res, next) => {
@@ -74,7 +70,6 @@ router.get("/lesson", (_, res, next) => {
 		pool.query('SELECT * FROM lesson', (error, result) => {
         res.json(result.rows);});
 	});
-	pool.end();
 });
 
 router.get("/lesson_role", (_, res, next) => {
@@ -86,7 +81,6 @@ router.get("/lesson_role", (_, res, next) => {
 		pool.query('SELECT * FROM lesson_role', (error, result) => {
         res.json(result.rows);});
 	});
-	pool.end();
 });
 
 router.get("/lesson_role_link", (_, res, next) => {
@@ -98,7 +92,6 @@ router.get("/lesson_role_link", (_, res, next) => {
 		pool.query('SELECT * FROM lesson_role_link', (error, result) => {
         res.json(result.rows);});
 	});
-	pool.end();
 });
 
 router.get("/cohort_lesson_link", (_, res, next) => {
@@ -110,7 +103,6 @@ router.get("/cohort_lesson_link", (_, res, next) => {
 		pool.query('SELECT * FROM cohort_lesson_link', (error, result) => {
         res.json(result.rows);});
 	});
-	pool.end();
 });
 
 router.get("/cohort_lesson_user_link", (_, res, next) => {
@@ -122,7 +114,6 @@ router.get("/cohort_lesson_user_link", (_, res, next) => {
 		pool.query('SELECT * FROM cohort_lesson_user_link', (error, result) => {
         res.json(result.rows);});
 	});
-	pool.end();
 });
 
 export default router;
