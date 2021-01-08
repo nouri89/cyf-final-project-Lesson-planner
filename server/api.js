@@ -7,113 +7,156 @@ const router = new Router();
 
 const pool = Connection;
 
-router.get("/", (_, res, next) => {
-	
-	Connection.connect((err) => {
-		if (err) {
-			return next(err);
-		}
-		res.json({ message: "Welcome to Class Planner API" });
-	});
-
-});
-router.get("/users", (_, res, next) => {
-	
-	Connection.connect((err) => {
-		if (err) {
-			return next(err);
-		}
-		pool.query('SELECT * FROM users', (error, result) => {
-        res.json(result.rows);});
-	});
+router.get("/", async (req, res) => {
+	try {
+		res.send("Welcome to CYF volunteers website");
+	} catch (error) {
+		console.log(error.message);
+	}
 });
 
-router.get("/school", (_, res, next) => {
-	
-	Connection.connect((err) => {
-		if (err) {
-			return next(err);
-		}
-		pool.query('SELECT * FROM school', (error, result) => {
-        res.json(result.rows);});
-	});
+router.get("/users", async (req, res) => {
+	try {
+		const results = await pool.query(
+			'SELECT * FROM users'
+		);
+
+		res.status(200).json({
+			status: "success",
+			results: results.rows.length,
+			data: results.rows,
+		});
+	} catch (error) {
+		console.log(error.message);
+	}
 });
 
-router.get("/cohort", (_, res, next) => {
-	
-	Connection.connect((err) => {
-		if (err) {
-			return next(err);
-		}
-		pool.query('SELECT * FROM cohort', (error, result) => {
-        res.json(result.rows);});
-	});
+router.get("/school", async (req, res) => {
+	try {
+		const results = await pool.query(
+			'SELECT * FROM school'
+		);
+
+		res.status(200).json({
+			status: "success",
+			results: results.rows.length,
+			data: results.rows,
+		});
+	} catch (error) {
+		console.log(error.message);
+	}
 });
 
-router.get("/module", (_, res, next) => {
-	
-	Connection.connect((err) => {
-		if (err) {
-			return next(err);
-		}
-		pool.query('SELECT * FROM module', (error, result) => {
-        res.json(result.rows);});
-	});
+router.get("/cohort", async (req, res) => {
+	try {
+		const results = await pool.query(
+			'SELECT * FROM cohort'
+		);
+
+		res.status(200).json({
+			status: "success",
+			results: results.rows.length,
+			data: results.rows,
+		});
+	} catch (error) {
+		console.log(error.message);
+	}
 });
 
-router.get("/lesson", (_, res, next) => {
-	
-	Connection.connect((err) => {
-		if (err) {
-			return next(err);
-		}
-		pool.query('SELECT * FROM lesson', (error, result) => {
-        res.json(result.rows);});
-	});
+router.get("/module", async (req, res) => {
+	try {
+		const results = await pool.query(
+			'SELECT * FROM module'
+		);
+
+		res.status(200).json({
+			status: "success",
+			results: results.rows.length,
+			data: results.rows,
+		});
+	} catch (error) {
+		console.log(error.message);
+	}
 });
 
-router.get("/lesson_role", (_, res, next) => {
-	
-	Connection.connect((err) => {
-		if (err) {
-			return next(err);
-		}
-		pool.query('SELECT * FROM lesson_role', (error, result) => {
-        res.json(result.rows);});
-	});
+router.get("/lesson", async (req, res) => {
+	try {
+		const results = await pool.query(
+			'SELECT * FROM lesson'
+		);
+
+		res.status(200).json({
+			status: "success",
+			results: results.rows.length,
+			data: results.rows,
+		});
+	} catch (error) {
+		console.log(error.message);
+	}
 });
 
-router.get("/lesson_role_link", (_, res, next) => {
-	
-	Connection.connect((err) => {
-		if (err) {
-			return next(err);
-		}
-		pool.query('SELECT * FROM lesson_role_link', (error, result) => {
-        res.json(result.rows);});
-	});
+router.get("/lesson_role", async (req, res) => {
+	try {
+		const results = await pool.query(
+			'SELECT * FROM lesson_role'
+		);
+
+		res.status(200).json({
+			status: "success",
+			results: results.rows.length,
+			data: results.rows,
+		});
+	} catch (error) {
+		console.log(error.message);
+	}
 });
 
-router.get("/cohort_lesson_link", (_, res, next) => {
-	
-	Connection.connect((err) => {
-		if (err) {
-			return next(err);
-		}
-		pool.query('SELECT * FROM cohort_lesson_link', (error, result) => {
-        res.json(result.rows);});
-	});
+router.get("/lesson_role_link", async (req, res) => {
+	try {
+		const results = await pool.query(
+			'SELECT * FROM lesson_role_link'
+		);
+
+		res.status(200).json({
+			status: "success",
+			results: results.rows.length,
+			data: results.rows,
+		});
+	} catch (error) {
+		console.log(error.message);
+	}
 });
 
-router.get("/cohort_lesson_user_link", (_, res, next) => {
-	
-	Connection.connect((err) => {
-		if (err) {
-			return next(err);
-		}
-		pool.query('SELECT * FROM cohort_lesson_user_link', (error, result) => {
-        res.json(result.rows);});
-	});
+router.get("/cohort_lesson_link", async (req, res) => {
+	try {
+		const results = await pool.query(
+			'SELECT * FROM cohort_lesson_link'
+		);
+
+		res.status(200).json({
+			status: "success",
+			results: results.rows.length,
+			data: results.rows,
+		});
+	} catch (error) {
+		console.log(error.message);
+	}
+});
+
+router.get("/cohort_lesson_user_link", async (req, res) => {
+	try {
+		const results = await pool.query(
+			'SELECT * FROM cohort_lesson_user_link'
+		);
+
+		res.status(200).json({
+			status: "success",
+			results: results.rows.length,
+			data: results.rows,
+		});
+	} catch (error) {
+		console.log(error.message);
+	}
 });
 
 export default router;
