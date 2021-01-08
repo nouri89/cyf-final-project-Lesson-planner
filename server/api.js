@@ -9,7 +9,7 @@ const pool = Connection;
 
 router.get("/", async (req, res) => {
 	try {
-		res.send("Welcome to CYF volunteers website");
+		res.json("Welcome to Class Planner API");
 	} catch (error) {
 		console.log(error.message);
 	}
