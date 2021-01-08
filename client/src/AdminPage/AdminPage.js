@@ -16,9 +16,9 @@ const AdminPage =({RolesButtonHandler})=>{
 
     <img className="imgAdmin d-inline" src={Admin_Page}></img>
 
-      <div class="text-right createClass d-inline">
+      <div className="text-right createClass d-inline">
       <Link to="/CreateClassPage">
-       <button class="btn btn-danger">
+       <button className="btn btn-danger">
          Create Class
        </button>
      </Link>
