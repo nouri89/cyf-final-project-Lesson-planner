@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import React from "react";
 import fakeLessons from "../fakeLessons.json"
 import LessonsTable from "./LessonsTable"
@@ -8,6 +9,21 @@ import { Link } from "react-router-dom";
  const lessons = fakeLessons.lessons;
 const UpcomingLessons =({RolesButtonHandler})=>{
  
+  const [lessons, setLessons] = useState([]);
+
+	useEffect(() => {
+		fetchData();
+	}, []);
+
+	const fetchData = async () => {
+		try {
+			const response = await fetch("https://cyf-finalproject-class-planner.herokuapp.com/api/lesson");
+			const data = await response.json();
+			console.log(data.data);
+		} catch (error) {
+			console.error(error.message);
+		}
+	}
 
     return(
       <div>
